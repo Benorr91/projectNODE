@@ -1,0 +1,31 @@
+[
+    {
+      "name":"BMW",
+      "info":"very Ex",
+      "category":"cars ex",
+      "img_url":"https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "price":550000
+    },
+    {
+        "name":"lamborghini",
+        "info":"very Ex",
+        "category":"cars ex",
+        "img_url":"https://images.pexels.com/photos/6462662/pexels-photo-6462662.png?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "price":550000
+    },
+    {
+        "name":"mercedes",
+        "info":"very Ex",
+        "category":"cars ex",
+        "img_url":"https://images.pexels.com/photos/193995/pexels-photo-193995.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "price":55000
+    },
+    {
+        "name":"ferrari",
+        "info":"very Ex",
+        "category":"cars ex",
+        "img_url":"https://images.pexels.com/photos/3954426/pexels-photo-3954426.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "price":55000
+    }
+  
+  ]

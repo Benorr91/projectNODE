@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Irish+Grover&family=Pacifico&family=Qahiri&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Documention API</title>
+
+</head>
+
+<body>
+    <!-- start nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid  ">
+            <a class="navbar-brand me-5" href="index.html">Api project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse   justify-content-end container" id="navbarSupportedContent">
+                <div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#id_buttons">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#id_resorces">Resources</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Routes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#flush-headingOne">GET</a></li>
+                                <li><a class="dropdown-item" href="#flush-headingTwo">POST</a></li>
+                                <li><a class="dropdown-item" href="#flush-headingThree">DELETE</a></li>
+                                <li><a class="dropdown-item" href="#flush-headingfour">PUT</a></li>
+                                <!-- <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#id_guide" tabindex="-1" aria-disabled="true">Guide</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav bar -->
+    <div class="bg-info container-fluid">
+        <div class="container d-flex justify-content-center  align-items-center " style="min-height: 300px;">
+            <h1 class="display-2">API Documentaion</h1>
+        </div>
+    </div>
+    <!-- start Resources -->
+    <div class=" container-fluid d-flex  border border-3 justify-content-center pb-3" id="id_resorces"
+        style="background-color: rgba(29, 139, 202, 0.2)">
+        <div class="container row justify-content-center " style="min-height: 300px; ">
+            <h1 class="display-2 text-center pb-3">Resources</h1>
+            <div class="card border border-3 me-lg-3 shadow" style="width: 30rem;">
+
+                <div class="card-body mb-2 ">
+                    <h5 class="card-title  h3 border-bottom  ">Users</h5>
+                    <p class="card-text">
+                    <ul class="list-group">
+                        <li class="list-group-item " aria-current="true">_id: (by defult)</li>
+                        <li class="list-group-item">name:
+                            string(),min(2),max(99) ,required()</li>
+                        <li class="list-group-item">pass:
+                            string(),min(2),max(99),required()</li>
+                        <li class="list-group-item">email:
+                            string(),min(1),max(999) ,required(),email()</li>
+                        <li class="list-group-item">date_created: (by defult)</li>
+                        <li class="list-group-item">role: (by defult)</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card border border-3 shadow   " style="width: 30rem;">
+                <div class="card-body">
+                    <h5 class="card-title  h3  border-bottom ">Vehicle</h5>
+                    <p class="card-text">
+                    <ul class="list-group">
+                        <li class="list-group-item " aria-current="true">_id: (by defult)</li>
+                        <li class="list-group-item">name: string(),min(2),max(99) ,required()</li>
+                        <li class="list-group-item">info: string(),min(2),max(9999) ,required()</li>
+                        <li class="list-group-item">category: string(),min(1),max(99) ,required() </li>
+                        <li class="list-group-item">img_url: string(),min(1),max(9999) ,required()</li>
+                        <li class="list-group-item">price : number(),min(0),max(9999999) ,required()</li>
+                        <li class="list-group-item">date_created: (by defult)</li>
+                        <li class="list-group-item">user_id: (from the user token)</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Resources  -->
+    <!-- start Guide -->
+    <main class="container-fluid bg-info">
+        <div id="id_guide" class="container   " style="min-height: 400px;">
+            <h1 class="display-2 text-center py-3">API Guide</h1>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card  mx-auto " style="width: 50%; height: 250px;">
+                            <div class="card-body">
+                                <h3 class="card-title">STEP 1</h3>
+                                <p class="card-text">For using my web-server you must to register first</p>
+                                <a href="#id_register" class="btn btn-primary ">Go register in routes post </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card mx-auto" style="width: 50%;  height: 250px;">
+                            <div class="card-body">
+                                <h3 class="card-title">STEP 2</h3>
+                                <p class="card-text">After sign up do login</p>
+                                <a href="#id_register" class="btn btn-primary">Go login in routes post </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card mx-auto" style="width: 50%;  height: 250px;">
+                            <div class="card-body">
+                                <h3 class="card-title">STEP 3</h3>
+                                <p class="card-text">After the login you Should get a token <br>
+                                    with this token you can see all of your vehicles's user's details ,add vehicles to
+                                    the DB ,delete vehicles </p>
+                                <a href="#id_register" class="btn btn-primary">Start work with my web-server</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- end Guide -->
+    <!-- start routes  -->
+    <div class="container-fluid  pt-4 " style="background-color: rgba(29, 139, 202, 0.2)">
+        <h1 class="display-2 text-center">Routes</h1>
+        <div class="accordion accordion-flush container " style="min-height: 300px;" id="accordionFlushExample">
+            <div class="accordion-item shadow-lg">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        GET
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                https://project-benor-2021.herokuapp.com/users/myinfo <br>
+                                 To get your info after login with token
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com/vehicles/searchMyInfo/?s <br>
+                                 To search in my vehicles by name or info 
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                https://project-benor-2021.herokuapp.com/vehicles/search/?s <br>
+                                 To search in DB vehicles by name or info
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com/vehicles/catcat/:catname <br>
+                                search by category name
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                https://project-benor-2021.herokuapp.com/vehicles/search/?s= <br>
+                                 search by name of vehicles or   info
+
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                https://project-benor-2021.herokuapp.com//vehicles/cat/car/?page=1= <br>
+                                show all vehicles from DB in page 1
+
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com//vehicles/cat/car/?page=1&perPage=5 <br>
+                                show all vehicles from DB  in page 1, 5 objects in page
+
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                https://project-benor-2021.herokuapp.com//vehicles/cat/car/?page=1&perPage=5&sort=price
+                                <br>
+                                show all car's user in page 1, 5 objects in page sorting by price desc (From the big to
+                                the small)
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="id_register" class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        POST
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul class="list-group  ">
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com/users/register</a><br>
+                                to sign up with  <span>
+                                {   
+                                    "name": "name",
+                                    "pass": "pass",
+                                    "email": "email@walla.com"
+                                   
+                                   }
+                            </span> in the body of the POST req
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary ">
+                                https://project-benor-2021.herokuapp.com/users/login<br>
+                                 to login and get token  <span>
+                                {   
+                                    
+                                    "pass": "pass",
+                                    "email": "email@walla.com"
+                                   
+                                   }
+                            </span> in the body of the POST req
+                            </li>
+
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com/vehicles/vehiclespost
+                                <div class="card bg-transparent border-0" style="width: 18rem;">
+                                   <span>  To add vehicles in the body of the POST req After login</span>
+                                        <div class="card-body  text-dark">
+                                            {
+                                            "name": "car name", <br>
+                                            "info": "info about", <br>
+                                            "category": "category", <br>
+                                            "img_url": "img", <br>
+                                            "price":"price" <br>
+                                            }
+                                        </div>
+                                </div>
+
+                               
+                            </li>
+                            <!-- <li class="list-group-item list-group-item-action list-group-item-info">A fourth item</li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">And a fifth one</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        DELETE
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="card">
+
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action list-group-item-primary">
+                                    https://project-benor-2021.herokuapp.com/vehicles/iddel <br>
+                                    To DELETE vehicles after login and get token <br>
+                                    for ex: /vehicles/61a89230b81cb6319c27368b
+                                </li>
+
+                                <!-- <li class="list-group-item">A second item</li>
+                                    <li class="list-group-item">A third item</li>
+                                    <li class="list-group-item">A fourth item</li>
+                                    <li class="list-group-item">And a fifth one</li> -->
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingfour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefor">
+                        PUT
+                    </button>
+                </h2>
+                <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="card">
+
+                            <ul class="list-group">
+
+                                <li class="list-group-item list-group-item-action list-group-item-info">
+                                    https://project-benor-2021.herokuapp.com/vehicles/:idEdit <br>
+                                    To Update vehicles after login and get token  <br>
+                                    for ex: /vehicles/61a89230b81cb6319c27368b
+
+                                </li>
+                                <!-- <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A fourth item</li>
+                                <li class="list-group-item">And a fifth one</li> -->
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- start section -->
+    <section id="id_buttons" class="text-center bg-info ">
+        <!-- get -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">GET API Example</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">GET API Example:</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <strong> GET :</strong> URL/vehicles/myInfo <br><br>
+                <strong> HEADER :</strong> <br>
+                <strong> KEY :</strong> <br><span class="text-warning">
+                    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg4ODcxMSwiZXhwIjoxNjM4ODkyMzExfQ.jTyxO-HPPCI6YOXjWHqlAG67XH9TxUN_I11Y-hiEYYg</span><br>
+                <br><br>
+                <strong> SERVER RESPONSE: </strong> <br> <br>
+                <span>Status: 200</span><br>
+                <span class="text-warning">
+                    [
+                    {<br>
+                    "_id": "61af769a95602109ca5b6c45", <br>
+                    "name": "opel corsa ", <br>
+                    "info": "color: red , year: 2021 ,yad 2", <br>
+                    "category": "cars ", <br>
+                    "price": 80000, <br>
+                    "img_url": "https://cdn.pixabay.com/photo/2015/02/26/20/11/auto-651037__340.jpg", <br>
+                    "date_created": "2021-12-07T13:44:11.530Z", <br>
+                    "user_id": "61af5570f3c0382c40c92930", <br>
+                    "__v": 0 <br>
+                    }, <br>
+                    { <br>
+                    "_id": "61af7ffc95602109ca5b6c48", <br>
+                    "name": "opel astra berlina", <br>
+                    "info": "not very Ex", <br>
+                    "category": "cars ex", <br>
+                    "price": 540000, <br>
+                    "img_url": <br>
+                    "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+                    <br>
+                    "date_created": "2021-12-07T13:44:11.530Z", <br>
+                    "user_id": "61af5570f3c0382c40c92930", <br>
+                    "__v": 0 <br>
+                    }
+                    ]
+                </span>
+
+
+            </div>
+        </div>
+        <!-- post -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+            aria-controls="offcanvasRight">POST API Example</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">POST API Example:</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <strong> POST :</strong> URL/vehicles/vehiclespost <br> <br>
+                <strong> BODY : </strong></br> <br> <span class="text-warning">
+                    {<br>
+
+                    "name": "opel astra berlina",<br>
+                    "info": "not very Ex",<br>
+                    "category": "cars ex",<br>
+                    "img_url":
+                    "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",<br>
+                    "price": 540000<br>
+
+                    } <br></span>
+                <strong> HEADER :</strong> <br><br>
+                <strong> KEY : </strong> <br><span class="text-warning">
+                    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg4ODcxMSwiZXhwIjoxNjM4ODkyMzExfQ.jTyxO-HPPCI6YOXjWHqlAG67XH9TxUN_I11Y-hiEYYg</span><br>
+                <strong> SERVER RESPONSE: </strong><br> <br>
+                <span>Status: 200</span><br>
+                <span class="text-warning">
+                    {<br>
+                    "name": "opel astra berlina", <br>
+                    "info": "not very Ex", <br>
+                    "category": "cars ex", <br>
+                    "price": 540000, <br>
+                    "img_url":
+                    "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+                    <br>
+                    "date_created": "2021-12-07T13:44:11.530Z", <br>
+                    "_id": "61af7ffc95602109ca5b6c48", <br>
+                    "user_id": "61af5570f3c0382c40c92930", <br>
+                    "__v": 0 <br>
+                    }</span>
+            </div>
+        </div>
+        <!-- PUT -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3"
+            aria-controls="offcanvasRight">PUT API Example</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight3" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">PUT API Example:</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <strong> PUT :</strong> URL/vehicles/61af8d0595602109ca5b6c4c <br><br>
+                <strong> HEADER :</strong> <br>
+                <strong> KEY :</strong> <br><span class="text-warning">
+                    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg5NDc4NywiZXhwIjoxNjM4ODk4Mzg3fQ.rFJHEn_p6UnGSu8PLkCWqSxF7o-Hdic29Vveh0HpjIQ</span><br>
+                <br><br>
+                <strong> BODY : </strong></br> <br> <span class="text-warning">
+                    {<br>
+
+                    "name": "opel astra berlina",<br>
+                    "info": "very lovley car",<br>
+                    "category": "cars ex",<br>
+                    "img_url":
+                    "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",<br>
+                    "price": 520000<br>
+
+                    } <br></span>
+
+
+                <strong> SERVER RESPONSE: </strong> <br> <br>
+                <span>Status: 200</span><br>
+                <span class="text-warning">
+
+                    {<br>
+                    "acknowledged": true,<br>
+                    "modifiedCount": 1,<br>
+                    "upsertedId": null,<br>
+                    "upsertedCount": 0,<br>
+                    "matchedCount": 1<br>
+                    }
+                </span>
+            </div>
+        </div>
+        <!-- DELETE -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4"
+            aria-controls="offcanvasRight">DELETE API Example</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight4" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">DELETE API EX</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <strong> DELETE :</strong> URL/vehicles/61af8d0595602109ca5b6c4c <br><br>
+                <strong> HEADER :</strong> <br>
+                <strong> KEY :</strong> <br><span class="text-warning">
+                    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg5NDc4NywiZXhwIjoxNjM4ODk4Mzg3fQ.rFJHEn_p6UnGSu8PLkCWqSxF7o-Hdic29Vveh0HpjIQ</span><br>
+                <br><br>
+
+
+                <strong> SERVER RESPONSE: </strong> <br> <br>
+                <span>Status: 200</span><br>
+                <span class="text-warning">
+
+                    {<br>
+                    {
+                    "deletedCount": 1
+                    }
+                </span>
+            </div>
+        </div>
+           <!-- STATUS CODES -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight5"
+            aria-controls="offcanvasRight">STATUS CODES</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight5" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">STATUS CODES</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Code Status</th>
+                            <th scope="col">Descripition</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>200</td>
+                            <td>OK</td>
+
+                        </tr>
+                        <th scope="row">2</th>
+                        <td>201</td>
+                        <td>Update Success</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>400</td>
+                            <td>Bad request</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>404</td>
+                            <td>Not Found</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>403</td>
+                            <td>Forbidden</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>500</td>
+                            <td>Sercer error</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="">Error codes and messages should help users recover from failure</h3>
+            </div>
+        </div>
+    </section>
+    <!-- end section -->
+    <!-- start footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead "><i class="fa fa-copyright" aria-hidden="true"></i> All rights reserved to Ben-or Radan </p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5"><i class="fa fa-arrow-up h1"
+                    aria-hidden="true"></i></a>
+            <div>
+                <a href="#" class="text-white me-4 h3">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-white me-4 h3">
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-white me-4 h3">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-white me-4 h3">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-white me-4 h3">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-white me-4 h3">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
