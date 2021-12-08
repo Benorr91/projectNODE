@@ -6,8 +6,8 @@ const { VehiclesModel, validateVehicles } = require("../models/vehiclesModel")
 const router = express.Router();
 
 //  localhost:3000/vehicles --> to see all the vehicles 
-router.get("/",auth, async (req, res) => {
-    console.log(req.userToken.id);
+router.get("/", async (req, res) => {
+    // console.log(req.userToken.id);
     let vehiclesData = await VehiclesModel.find({})
     res.json(vehiclesData)
 
@@ -67,7 +67,7 @@ router.delete("/:iddel",auth, async (req, res) => {
 
 })
 
-//  localhost:3000/vehicles/searchMyInfo/?s= לפי היוזר שלו
+//  localhost:3000/vehicles/searchMyInfo/?s=  חייב טוקן לפי היוזר שלו
 router.get("/searchMyInfo",auth, async (req, res) => {
 
     try {
@@ -89,7 +89,7 @@ router.get("/searchMyInfo",auth, async (req, res) => {
 })
 
 //  localhost:3000/vehicles/search/?s=חיפוש לפי שם או מידע
-router.get("/search",auth, async (req, res) => {
+router.get("/search", async (req, res) => {
 
     try {
         let searchQ = req.query.s
@@ -113,7 +113,7 @@ router.get("/search",auth, async (req, res) => {
 //?perPage=how many items per page
 //?page=num of page
 //?sort=sorting by one of the attributs
-router.get("/cat/:catname",auth, async (req, res) => {
+router.get("/cat/:catname", async (req, res) => {
 
     try {
         let perPage = req.query.perPage || 5;
