@@ -71,6 +71,10 @@ router.delete("/:iddel",auth, async (req, res) => {
 router.get("/searchMyInfo",auth, async (req, res) => {
 
     try {
+        let perPage = req.query.perPage || 5;
+        let page = req.query.page || 1;
+        let sort = req.query.sort || "_id";
+        let reverse= (req.query.r=="yes")?req.query.r= -1:1
         let searchQ = req.query.s
         let query
         if (!searchQ) {
@@ -80,6 +84,9 @@ router.get("/searchMyInfo",auth, async (req, res) => {
         query = searchRegExp
         let token=req.userToken.id;
         let serchData = await VehiclesModel.find({ $or: [{ name: searchRegExp,user_id:token  }, { info: searchRegExp,user_id:token  }] })
+        .limit(Number(perPage))
+        .skip((page-1)*perPage)
+        .sort({[sort]:reverse})
         res.status(200).json(serchData);
     } catch (err) {
         console.log(err);
@@ -101,6 +108,7 @@ router.get("/search", async (req, res) => {
         query = searchRegExp
         // let token=req.userToken.id;
         let serchData = await VehiclesModel.find({ $or: [{ name: searchRegExp  }, { info: searchRegExp  }] })
+        
         res.status(200).json(serchData);
     } catch (err) {
         console.log(err);
@@ -120,13 +128,14 @@ router.get("/cat/:catname", async (req, res) => {
         let page = req.query.page || 1;
         let sort = req.query.sort || "_id";
         let searchQ = req.params.catname
+        let reverse= (req.query.r=="yes")?req.query.r= -1:1
         let searchRegExp = new RegExp(searchQ, "i")
         // let token=req.userToken.id;
         let serchData = await VehiclesModel.find({ category: searchRegExp })
         // ,user_id:token
         .limit(Number(perPage))
         .skip((page-1)*perPage)
-        .sort({[sort]:-1})
+        .sort({[sort]:reverse})
         res.status(200).json(serchData);
     } catch (err) {
         console.log(err);
