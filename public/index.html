@@ -28,11 +28,12 @@
             <div class="collapse navbar-collapse   justify-content-end container" id="navbarSupportedContent">
                 <div>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#id_buttons">Examples</a>
-                        </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link" href="#id_resorces">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#id_guide" tabindex="-1" aria-disabled="true">Guide</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
@@ -51,8 +52,9 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#id_guide" tabindex="-1" aria-disabled="true">Guide</a>
+                            <a class="nav-link active" aria-current="page" href="#id_buttons">Examples</a>
                         </li>
+                       
                     </ul>
                 </div>
             </div>
@@ -144,10 +146,19 @@
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+    
             </div>
-
-        </div>
-
+    
+            </div>
+   
     </main>
 
     <!-- end Guide -->
@@ -168,38 +179,38 @@
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-action list-group-item-primary">
                                 https://project-benor-2021.herokuapp.com/users/myinfo <br>
-                                 To get your info after login with token
+                                 To get your info after you resived token  
                             </li>
                             <li class="list-group-item list-group-item-action list-group-item-info">
                                 https://project-benor-2021.herokuapp.com/vehicles/searchMyInfo/?s <br>
-                                 To search in my vehicles by name or info 
+                                 To search in <strong>my vehicles</strong>  by name or info after you resived token
                             </li>
                             <li class="list-group-item list-group-item-action list-group-item-primary">
-                              <a href="http://localhost:3000/vehicles/search/?s=honda">  https://project-benor-2021.herokuapp.com/vehicles/search/?s=honda </a><br>
+                              <a href="https://project-benor-2021.herokuapp.com/vehicles/search/?s=honda">  https://project-benor-2021.herokuapp.com/vehicles/search/?s=honda </a><br>
                                  To search in DB vehicles by name or info
                             </li>
                             <li class="list-group-item list-group-item-action list-group-item-info">
-                              <a href="http://localhost:3000/vehicles/cat/car">  https://project-benor-2021.herokuapp.com/vehicles/cat/car </a><br>
+                              <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car">  https://project-benor-2021.herokuapp.com/vehicles/cat/car </a><br>
                                 search by category name
                             </li>
-                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <!-- <li class="list-group-item list-group-item-action list-group-item-primary">
                                 https://project-benor-2021.herokuapp.com/vehicles/search/?s= <br>
                                  search by name of vehicles or   info
 
-                            </li>
+                            </li> -->
                             <li class="list-group-item list-group-item-action list-group-item-primary">
-                                https://project-benor-2021.herokuapp.com//vehicles/cat/car/?page=1= <br>
-                                show all vehicles from DB in page 1
+                             <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=1&perPage=2">  https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=1&perPage=2</a> <br>
+                                show all vehicles from DB in page 1 2 in page
 
                             </li>
                             <li class="list-group-item list-group-item-action list-group-item-info">
-                                https://project-benor-2021.herokuapp.com//vehicles/cat/car/?page=1&perPage=5 <br>
-                                show all vehicles from DB  in page 1, 5 objects in page
+                              <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3">  https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3</a></br>
+                                show all vehicles from DB  in page 2, 3 objects in page
 
                             </li>
                             <li class="list-group-item list-group-item-action list-group-item-primary">
-                                https://project-benor-2021.herokuapp.com//vehicles/cat/car/?page=1&perPage=5&sort=price
-                                <br>
+                              <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3&sort=price"> https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3&sort=price
+                            </a> <br>
                                 show all car's user in page 1, 5 objects in page sorting by price desc (From the big to
                                 the small)
                             </li>
@@ -342,7 +353,7 @@
             <div class="offcanvas-body">
                 <strong> GET :</strong> URL/vehicles/myInfo <br><br>
                 <strong> HEADER :</strong> <br>
-                <strong> KEY :</strong> <br><span class="text-warning">
+                <strong> KEY : "x-api-key"</strong> <br><span class="text-warning">
                     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg4ODcxMSwiZXhwIjoxNjM4ODkyMzExfQ.jTyxO-HPPCI6YOXjWHqlAG67XH9TxUN_I11Y-hiEYYg</span><br>
                 <br><br>
                 <strong> SERVER RESPONSE: </strong> <br> <br>
@@ -403,7 +414,7 @@
 
                     } <br></span>
                 <strong> HEADER :</strong> <br><br>
-                <strong> KEY : </strong> <br><span class="text-warning">
+                <strong> KEY : "x-api-key" </strong> <br><span class="text-warning">
                     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg4ODcxMSwiZXhwIjoxNjM4ODkyMzExfQ.jTyxO-HPPCI6YOXjWHqlAG67XH9TxUN_I11Y-hiEYYg</span><br>
                 <strong> SERVER RESPONSE: </strong><br> <br>
                 <span>Status: 200</span><br>
@@ -436,7 +447,7 @@
             <div class="offcanvas-body">
                 <strong> PUT :</strong> URL/vehicles/61af8d0595602109ca5b6c4c <br><br>
                 <strong> HEADER :</strong> <br>
-                <strong> KEY :</strong> <br><span class="text-warning">
+                <strong> KEY : "x-api-key"</strong> <br><span class="text-warning">
                     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg5NDc4NywiZXhwIjoxNjM4ODk4Mzg3fQ.rFJHEn_p6UnGSu8PLkCWqSxF7o-Hdic29Vveh0HpjIQ</span><br>
                 <br><br>
                 <strong> BODY : </strong></br> <br> <span class="text-warning">
@@ -479,7 +490,7 @@
             <div class="offcanvas-body">
                 <strong> DELETE :</strong> URL/vehicles/61af8d0595602109ca5b6c4c <br><br>
                 <strong> HEADER :</strong> <br>
-                <strong> KEY :</strong> <br><span class="text-warning">
+                <strong> KEY : "x-api-key"</strong> <br><span class="text-warning">
                     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY1NTcwZjNjMDM4MmM0MGM5MjkzMCIsImlhdCI6MTYzODg5NDc4NywiZXhwIjoxNjM4ODk4Mzg3fQ.rFJHEn_p6UnGSu8PLkCWqSxF7o-Hdic29Vveh0HpjIQ</span><br>
                 <br><br>
 
@@ -518,35 +529,35 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>200</td>
-                            <td>OK</td>
+                            <td class="text-success">200</td>
+                            <td class="text-success">OK</td>
 
                         </tr>
                         <th scope="row">2</th>
-                        <td>201</td>
-                        <td>Update Success</td>
+                        <td class="text-success">201</td>
+                        <td class="text-success">Update Success</td>
 
                         </tr>
                         <tr>
                             <th scope="row">3</th>
-                            <td>400</td>
-                            <td>Bad request</td>
+                            <td class="text-danger">400</td>
+                            <td class="text-danger">Bad request</td>
 
                         </tr>
                         <tr>
                             <th scope="row">4</th>
-                            <td>404</td>
-                            <td>Not Found</td>
+                            <td class="text-danger">404</td>
+                            <td class="text-danger">Not Found</td>
                         </tr>
                         <tr>
                             <th scope="row">5</th>
-                            <td>403</td>
-                            <td>Forbidden</td>
+                            <td class="text-danger">403</td>
+                            <td class="text-danger">Forbidden</td>
                         </tr>
                         <tr>
                             <th scope="row">6</th>
-                            <td>500</td>
-                            <td>Sercer error</td>
+                            <td class="text-danger">500</td>
+                            <td class="text-danger">Server error</td>
                         </tr>
                     </tbody>
                 </table>
