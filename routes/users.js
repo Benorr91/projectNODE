@@ -4,6 +4,12 @@ const { validateUser, UserModel, genToken, validatelogin } = require("../models/
 const { auth } = require("../middele/auth");
 
 const router = express.Router();
+// localhost:3000/users/myinfo
+router.get("/myinfo",auth ,async (req, res) => {
+  console.log(req.userToken.id);
+  let data = await UserModel.findOne({_id:req.userToken.id},{pass:0})
+  res.json(data)
+})
 //  https://project-benor-2021.herokuapp.com/users/register
 router.post("/register", async (req, res) => {
   let validBody = validateUser(req.body);
@@ -47,12 +53,7 @@ router.post("/login", async (req, res) => {
   }
 
 })
-// localhost:3000/users/myinfo
-router.get("/myinfo",auth ,async (req, res) => {
-  console.log(req.userToken.id);
-  let data = await UserModel.findOne({_id:req.userToken.id},{pass:0})
-  res.json(data)
-})
+
 
 
 

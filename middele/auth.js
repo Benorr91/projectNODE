@@ -1,4 +1,5 @@
-const jwt= require("jsonwebtoken")
+const jwt= require("jsonwebtoken");
+const { config } = require("../config/secret");
 
 exports.auth=(req,res,next)=>{
     let token = req.header("x-api-key");
@@ -6,7 +7,8 @@ exports.auth=(req,res,next)=>{
         return res.status(401).json({msg:"you must send token to this endpoint"})
     }
     try{
-        let decode= jwt.verify(token,"BENorSeCret");
+        // let decode= jwt.verify(token,"BENorSeCret");
+        let decode= jwt.verify(token,config.tokenSecret);
         req.userToken=decode;
         next()
     }catch(err){
