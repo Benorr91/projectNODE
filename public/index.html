@@ -66,294 +66,6 @@
             <h1 class="display-2">API Documentaion</h1>
         </div>
     </div>
-    <!-- start Resources -->
-    <div class=" container-fluid d-flex  border border-3 justify-content-center pb-lg-3" id="id_resorces"
-        style="background-color: rgba(29, 139, 202, 0.2)">
-        <div class="container row justify-content-center " style="min-height: 300px; ">
-            <h1 class="display-2 text-center pb-3">Resources</h1>
-            <div class="card border border-3 me-lg-3 shadow" style="width: 30rem;">
-
-                <div class="card-body mb-2 ">
-                    <h5 class="card-title  h3 border-bottom  ">Users</h5>
-                    <p class="card-text">
-                    <ul class="list-group">
-                        <li class="list-group-item " aria-current="true">_id: (by defult)</li>
-                        <li class="list-group-item">name:
-                            string(),min(2),max(99) ,required()</li>
-                        <li class="list-group-item">pass:
-                            string(),min(2),max(99),required()</li>
-                        <li class="list-group-item">email:
-                            string(),min(1),max(999) ,required(),email()</li>
-                        <li class="list-group-item">date_created: (by defult)</li>
-                        <li class="list-group-item">role: (by defult)</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="card border border-3 shadow   " style="width: 30rem;">
-                <div class="card-body">
-                    <h5 class="card-title  h3  border-bottom ">Vehicle</h5>
-                    <p class="card-text">
-                    <ul class="list-group">
-                        <li class="list-group-item " aria-current="true">_id: (by defult)</li>
-                        <li class="list-group-item">name: string(),min(2),max(99) ,required()</li>
-                        <li class="list-group-item">info: string(),min(2),max(9999) ,required()</li>
-                        <li class="list-group-item">category: string(),min(1),max(99) ,required() </li>
-                        <li class="list-group-item">img_url: string(),min(1),max(9999) ,required()</li>
-                        <li class="list-group-item">price : number(),min(0),max(9999999) ,required()</li>
-                        <li class="list-group-item">date_created: (by defult)</li>
-                        <li class="list-group-item">user_id: (from the user token)</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end Resources  -->
-    <!-- start Guide -->
-    <main class="container-fluid bg-info">
-        <div id="id_guide" class="container   " style="min-height: 400px;">
-            <h1 class="display-2 text-center py-3">API Guide</h1>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card  mx-auto " style="width: 50%; height: 250px;">
-                            <div class="card-body">
-                                <h3 class="card-title">STEP 1</h3>
-                                <p class="card-text">For using my web-server you must to register first</p>
-                                <a href="#id_register" class="btn btn-primary ">Go register in routes post </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card mx-auto" style="width: 50%;  height: 250px;">
-                            <div class="card-body">
-                                <h3 class="card-title">STEP 2</h3>
-                                <p class="card-text">After sign up do login</p>
-                                <a href="#id_register" class="btn btn-primary">Go login in routes post </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card mx-auto" style="width: 50%;  height: 250px;">
-                            <div class="card-body">
-                                <h3 class="card-title">STEP 3</h3>
-                                <p class="card-text">After the login you Should get a token <br>
-                                    with this token you can see all of your vehicles's user's details ,add vehicles to
-                                    the DB ,delete vehicles </p>
-                                <a href="#id_register" class="btn btn-primary">Start work with my web-server</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- end Guide -->
-    <!-- start routes  -->
-    <div class="container-fluid  pt-4 " style="background-color: rgba(29, 139, 202, 0.2)">
-        <h1 class="display-2 text-center">Routes</h1>
-        <div class="accordion accordion-flush container " style="min-height: 300px;" id="accordionFlushExample">
-            <div class="accordion-item shadow-lg">
-                <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        GET
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <ul class="list-group">
-                            <li class="list-group-item list-group-item-action list-group-item-primary">
-                                https://project-benor-2021.herokuapp.com/users/myinfo <br>
-                                <p class="text-danger lead"> To get your info after you resived token </p>
-                            </li>
-                            <li class="list-group-item list-group-item-action list-group-item-info">
-                                https://project-benor-2021.herokuapp.com/vehicles/searchMyInfo/?s <br>
-                                <p class="text-danger lead"> To search in <strong>my vehicles</strong> by name or info
-                                    after you resived token </p>
-                            </li>
-                            <li class="list-group-item list-group-item-action list-group-item-primary">
-                                <a href="https://project-benor-2021.herokuapp.com/vehicles/search/?s=honda">
-                                    https://project-benor-2021.herokuapp.com/vehicles/search/?s=honda </a><br>
-                                <p class="text-danger lead"> To search in DB vehicles by name or info </p>
-                            </li>
-                            <li class="list-group-item list-group-item-action list-group-item-info">
-                                <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car">
-                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car </a><br>
-                                <p class="text-danger lead"> To search by category name </p>
-                            </li>
-                            <!-- <li class="list-group-item list-group-item-action list-group-item-primary">
-                                https://project-benor-2021.herokuapp.com/vehicles/search/?s= <br>
-                                 search by name of vehicles or   info
-
-                            </li> -->
-                            <li class="list-group-item list-group-item-action list-group-item-primary">
-                                <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=1&perPage=2">
-                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=1&perPage=2</a> <br>
-                                <p class="text-danger lead"> To show all vehicles from DB in page 1 , 2 objects in page </p>
-
-                            </li>
-                            <li class="list-group-item list-group-item-action list-group-item-info">
-                                <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3">
-                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3</a></br>
-                                <p class="text-danger lead"> To show all vehicles from DB in page 2, 3 objects in page
-                                </p>
-
-                            </li>
-                            <li class="list-group-item list-group-item-action list-group-item-primary">
-                                <a
-                                    href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3&sort=price&r=yes">
-                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3&sort=price&r=yes
-                                </a> <br>
-                                <p class="text-danger lead"> To show all car's user in page 1, 5 objects in page sorting
-                                    by price desc (From the big to
-                                    the small)</p>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="id_register" class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        POST
-                    </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <ul class="list-group  ">
-                            <li class="list-group-item list-group-item-action list-group-item-info">
-                                https://project-benor-2021.herokuapp.com/users/register</a><br>
-                                <p class="text-danger lead"> To sign up with </p>
-                                <span>
-                                    {
-                                    "name": "name",
-                                    "pass": "pass",
-                                    "email": "email@walla.com"
-
-                                    }
-                                </span> in the body of the POST req
-                            </li>
-                            <li class="list-group-item list-group-item-action list-group-item-primary ">
-                                https://project-benor-2021.herokuapp.com/users/login<br>
-                                <p class="text-danger lead"> To login and get token </p>
-                                <span>
-                                    {
-
-                                    "pass": "pass",
-                                    "email": "email@walla.com"
-
-                                    }
-                                </span> in the body of the POST req
-                            </li>
-
-                            <li class="list-group-item list-group-item-action list-group-item-info">
-                                https://project-benor-2021.herokuapp.com/vehicles/vehiclespost
-                                <div class="card bg-transparent border-0" style="width: 18rem;">
-                                    <p class="text-danger lead"> To add vehicles you need to enter  body like this to the POST req
-                                        body  after login and resived token
-                                    </p>
-                                    <div class="card-body  text-dark">
-                                        {
-                                        "name": "car name", <br>
-                                        "info": "info about", <br>
-                                        "category": "category", <br>
-                                        "img_url": "img", <br>
-                                        "price":"price" <br>
-                                        }
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <!-- <li class="list-group-item list-group-item-action list-group-item-info">A fourth item</li>
-                            <li class="list-group-item list-group-item-action list-group-item-primary">And a fifth one</li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        DELETE
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <div class="card">
-
-                            <ul class="list-group">
-                                <li class="list-group-item list-group-item-action list-group-item-primary">
-                                    https://project-benor-2021.herokuapp.com/vehicles/iddel <br>
-                                    <p class="text-danger lead"> To DELETE vehicles after login and get token</p> <br>
-                                    for ex: /vehicles/61a89230b81cb6319c27368b
-                                </li>
-
-                                <!-- <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                    <li class="list-group-item">A fourth item</li>
-                                    <li class="list-group-item">And a fifth one</li> -->
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingfour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefor">
-                        PUT
-                    </button>
-                </h2>
-                <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <div class="card">
-
-                            <ul class="list-group">
-
-                                <li class="list-group-item list-group-item-action list-group-item-info">
-                                    https://project-benor-2021.herokuapp.com/vehicles/:idEdit <br>
-                                    To Update vehicles after login and get token <br>
-                                    for ex: /vehicles/61a89230b81cb6319c27368b
-
-                                </li>
-                                <!-- <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                                <li class="list-group-item">A fourth item</li>
-                                <li class="list-group-item">And a fifth one</li> -->
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- start section -->
     <section id="id_buttons" class="text-center bg-info ">
         <!-- get -->
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
@@ -580,7 +292,287 @@
             </div>
         </div>
     </section>
-    <!-- end section -->
+    <!-- start Resources -->
+    <div class=" container-fluid d-flex  border border-3 justify-content-center pb-lg-3" id="id_resorces"
+        style="background-color: rgba(29, 139, 202, 0.2)">
+        <div class="container row justify-content-center " style="min-height: 300px; ">
+            <h1 class="display-2 text-center pb-3">Resources</h1>
+            <div class="card border border-3 me-lg-3 shadow" style="width: 30rem;">
+
+                <div class="card-body mb-2 ">
+                    <h5 class="card-title  h3 border-bottom  ">Users</h5>
+                    <p class="card-text">
+                    <ul class="list-group">
+                        <li class="list-group-item " aria-current="true">_id: (by defult)</li>
+                        <li class="list-group-item">name:
+                            string(),min(2),max(99) ,required()</li>
+                        <li class="list-group-item">pass:
+                            string(),min(2),max(99),required()</li>
+                        <li class="list-group-item">email:
+                            string(),min(1),max(999) ,required(),email()</li>
+                        <li class="list-group-item">date_created: (by defult)</li>
+                        <li class="list-group-item">role: (by defult)</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card border border-3 shadow   " style="width: 30rem;">
+                <div class="card-body">
+                    <h5 class="card-title  h3  border-bottom ">Vehicle</h5>
+                    <p class="card-text">
+                    <ul class="list-group">
+                        <li class="list-group-item " aria-current="true">_id: (by defult)</li>
+                        <li class="list-group-item">name: string(),min(2),max(99) ,required()</li>
+                        <li class="list-group-item">info: string(),min(2),max(9999) ,required()</li>
+                        <li class="list-group-item">category: string(),min(1),max(99) ,required() </li>
+                        <li class="list-group-item">img_url: string(),min(1),max(9999) ,required()</li>
+                        <li class="list-group-item">price : number(),min(0),max(9999999) ,required()</li>
+                        <li class="list-group-item">date_created: (by defult)</li>
+                        <li class="list-group-item">user_id: (from the user token)</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Resources  -->
+    <!-- start Guide -->
+    <main class="container-fluid bg-info">
+        <div id="id_guide" class="container   " style="min-height: 400px;">
+            <h1 class="display-2 text-center py-3">API Guide</h1>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card  mx-auto " style="width: 50%; height: 250px;">
+                            <div class="card-body">
+                                <h3 class="card-title">STEP 1</h3>
+                                <p class="card-text">For using my web-server you must to register first</p>
+                                <a href="#id_register" class="btn btn-primary ">Go register in routes post </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card mx-auto" style="width: 50%;  height: 250px;">
+                            <div class="card-body">
+                                <h3 class="card-title">STEP 2</h3>
+                                <p class="card-text">After sign up do login</p>
+                                <a href="#id_register" class="btn btn-primary">Go login in routes post </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card mx-auto" style="width: 50%;  height: 250px;">
+                            <div class="card-body">
+                                <h3 class="card-title">STEP 3</h3>
+                                <p class="card-text">After the login you Should get a token <br>
+                                    with this token you can see all of your vehicles's user's details ,add vehicles to
+                                    the DB ,delete vehicles </p>
+                                <a href="#id_register" class="btn btn-primary">Start work with my web-server</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- end Guide -->
+    <!-- start routes  -->
+    <div class="container-fluid  pt-4 " style="background-color: rgba(29, 139, 202, 0.2)">
+        <h1 class="display-2 text-center">Routes</h1>
+        <div class="accordion accordion-flush container " style="min-height: 300px;" id="accordionFlushExample">
+            <div class="accordion-item shadow-lg">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        GET
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                https://project-benor-2021.herokuapp.com/users/myinfo <br>
+                                <p class="text-danger lead"> To get your info after you resived token </p>
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com/vehicles/searchMyInfo/?s <br>
+                                <p class="text-danger lead"> To search in <strong>my vehicles</strong> by name or info
+                                    after you resived token </p>
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                <a href="https://project-benor-2021.herokuapp.com/vehicles/search/?s=honda">
+                                    https://project-benor-2021.herokuapp.com/vehicles/search/?s=honda </a><br>
+                                <p class="text-danger lead"> To search in DB vehicles by name or info </p>
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car">
+                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car </a><br>
+                                <p class="text-danger lead"> To search by category name </p>
+                            </li>
+                            <!-- <li class="list-group-item list-group-item-action list-group-item-primary">
+                                https://project-benor-2021.herokuapp.com/vehicles/search/?s= <br>
+                                 search by name of vehicles or   info
+
+                            </li> -->
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=1&perPage=2">
+                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=1&perPage=2</a> <br>
+                                <p class="text-danger lead"> To show all vehicles from DB in page 1 , 2 objects in page
+                                </p>
+
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                <a href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3">
+                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3</a></br>
+                                <p class="text-danger lead"> To show all vehicles from DB in page 2, 3 objects in page
+                                </p>
+
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                <a
+                                    href="https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3&sort=price&r=yes">
+                                    https://project-benor-2021.herokuapp.com/vehicles/cat/car/?page=2&perPage=3&sort=price&r=yes
+                                </a> <br>
+                                <p class="text-danger lead"> To show all car's user in page 1, 5 objects in page sorting
+                                    by price desc (From the big to
+                                    the small)</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="id_register" class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        POST
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul class="list-group  ">
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com/users/register</a><br>
+                                <p class="text-danger lead"> To sign up with </p>
+                                <span>
+                                    {
+                                    "name": "name",
+                                    "pass": "pass",
+                                    "email": "email@walla.com"
+
+                                    }
+                                </span> in the body of the POST req
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary ">
+                                https://project-benor-2021.herokuapp.com/users/login<br>
+                                <p class="text-danger lead"> To login and get token </p>
+                                <span>
+                                    {
+
+                                    "pass": "pass",
+                                    "email": "email@walla.com"
+
+                                    }
+                                </span> in the body of the POST req
+                            </li>
+
+                            <li class="list-group-item list-group-item-action list-group-item-info">
+                                https://project-benor-2021.herokuapp.com/vehicles/vehiclespost
+                                <div class="card bg-transparent border-0" style="width: 18rem;">
+                                    <p class="text-danger lead"> To add vehicles you need to enter body like this to the
+                                        POST req
+                                        body after login and resived token
+                                    </p>
+                                    <div class="card-body  text-dark">
+                                        {
+                                        "name": "car name", <br>
+                                        "info": "info about", <br>
+                                        "category": "category", <br>
+                                        "img_url": "img", <br>
+                                        "price":"price" <br>
+                                        }
+                                    </div>
+                                </div>
+
+
+                            </li>
+                            <!-- <li class="list-group-item list-group-item-action list-group-item-info">A fourth item</li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">And a fifth one</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        DELETE
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="card">
+
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action list-group-item-primary">
+                                    https://project-benor-2021.herokuapp.com/vehicles/iddel <br>
+                                    <p class="text-danger lead"> To DELETE vehicles after login and get token</p> <br>
+                                    for ex: /vehicles/61a89230b81cb6319c27368b
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingfour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefor">
+                        PUT
+                    </button>
+                </h2>
+                <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="card">
+
+                            <ul class="list-group">
+
+                                <li class="list-group-item list-group-item-action list-group-item-info">
+                                    https://project-benor-2021.herokuapp.com/vehicles/:idEdit <br>
+                                    To Update vehicles after login and get token <br>
+                                    for ex: /vehicles/61a89230b81cb6319c27368b
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- start footer -->
     <footer class="p-5 bg-dark text-white text-center position-relative">
         <div class="container">
