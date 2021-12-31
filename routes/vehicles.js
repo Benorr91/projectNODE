@@ -67,7 +67,7 @@ router.delete("/:iddel",auth, async (req, res) => {
 
 })
 
-//  localhost:3000/vehicles/searchMyInfo/?s=  חייב טוקן לפי היוזר שלו
+//  localhost:3000/vehicles/searchMyInfo/?s=  
 router.get("/searchMyInfo",auth, async (req, res) => {
 
     try {
@@ -95,7 +95,7 @@ router.get("/searchMyInfo",auth, async (req, res) => {
 
 })
 
-//  localhost:3000/vehicles/search/?s=חיפוש לפי שם או מידע
+//  localhost:3000/vehicles/search/?s=
 router.get("/search", async (req, res) => {
 
     try {
@@ -130,9 +130,7 @@ router.get("/cat/:catname", async (req, res) => {
         let searchQ = req.params.catname
         let reverse= (req.query.r=="yes")?req.query.r= -1:1
         let searchRegExp = new RegExp(searchQ, "i")
-        // let token=req.userToken.id;
         let serchData = await VehiclesModel.find({ category: searchRegExp })
-        // ,user_id:token
         .limit(Number(perPage))
         .skip((page-1)*perPage)
         .sort({[sort]:reverse})
