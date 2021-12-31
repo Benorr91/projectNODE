@@ -7,7 +7,7 @@ exports.auth=(req,res,next)=>{
         return res.status(401).json({msg:"you must send token to this endpoint"})
     }
     try{
-        // let decode= jwt.verify(token,"BENorSeCret");
+
         let decode= jwt.verify(token,config.tokenSecret);
         req.userToken=decode;
         next()
